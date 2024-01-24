@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -11,6 +12,7 @@
   "dependencies": {
     "@prisma/client": "^5.8.1",
     "next": "14.1.0",
+    "prisma": "^5.8.1",
     "random-user-data": "^1.1.1",
     "react": "^18",
     "react-dom": "^18"
