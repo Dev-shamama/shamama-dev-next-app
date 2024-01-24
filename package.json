@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "postinstall": "prisma generate && prisma migrate deploy && next build",
+    "postinstall": "prisma generate && next build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build"
   },
   "dependencies": {
     "@prisma/client": "^5.8.1",
