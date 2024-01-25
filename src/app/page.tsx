@@ -1,9 +1,11 @@
 import GetData from "./getdata";
-export default function Home() {
+const Home = () => {
   return (
     <>
       <h1>Welcome to Next.js + Prisma</h1>
       <GetData />
     </>
   );
-}
+};
+
+export default Home;

@@ -1,6 +1,6 @@
 const ApiData = async () => {
   try {
-    const data = await fetch("http://localhost:3000/api/get", {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get`, {
       method: "GET",
     });
     const result = await data.json();
@@ -10,9 +10,7 @@ const ApiData = async () => {
   }
 };
 const GetData = async () => {
-  const d = await ApiData();
-  console.log(d);
-
+  const d: any = await ApiData();
   return (
     <div>
       <table border={1}>
@@ -26,7 +24,7 @@ const GetData = async () => {
           </tr>
         </thead>
         <tbody>
-          {d.map(
+          {d && d.map(
             (item: {
               id: string;
               name: string;
