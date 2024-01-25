@@ -2,6 +2,7 @@ const ApiData = async () => {
   try {
     const data = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/get`, {
       method: "GET",
+      cache: "no-cache"
     });
     const result = await data.json();
     return result.data;
